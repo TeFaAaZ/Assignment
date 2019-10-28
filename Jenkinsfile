@@ -3,7 +3,7 @@ agent any
 environment {
 dotnet = 'D:\\work\\Dell\\aspnetcore-runtime-2.2.7-win-x64'
 }
-}
+
 stage ('build') {
 steps {
 bat label: '', script: 'D:\\work\\Dell\\aspnetcore-runtime-2.2.7-win-x64\\dotnet.exe clean ./HelloWorldSolution.sln'
@@ -46,5 +46,4 @@ bat label: '', script: 'cp -f \'%JENKINS_HOME%\\jobs\\%JOB_NAME%\\builds\\%BUILD
         }
  }
  }
-}
-}
+ }
