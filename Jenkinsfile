@@ -29,6 +29,8 @@ bat label: '', script: 'D:\\work\\Dell\\aspnetcore-runtime-2.2.7-win-x64\\dotnet
 stage('getlog') {
         steps {
 bat label: '', script: 'cp -f \'%JENKINS_HOME%\\jobs\\%JOB_NAME%\\builds\\%BUILD_ID%\\log\' \'.\\releases\\%JOB_NAME%_%BUILD_ID%\\log\''
+bat label: '', script: 'cp -f \'%JENKINS_HOME%\\jobs\\%JOB_NAME%\\branches\\%BRANCH_NAME%\\%BUILD_ID%\\log\' \'.\\releases\\%JOB_NAME%_%BUILD_ID%\\log\''
+                                                multibranch\branches\test1\builds\6
 }
 }
  stage('archive') {
